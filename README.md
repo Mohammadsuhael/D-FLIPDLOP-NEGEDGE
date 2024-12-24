@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/548b0229-39df-4718-910c-d4ba9e6dbe87)# D-FLIPDLOP-NEGEDGE
 
 **AIM:**
 
