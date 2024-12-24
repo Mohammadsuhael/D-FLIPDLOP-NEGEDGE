@@ -1,4 +1,4 @@
-# D-FLIPDLOP-NEGEDGE
+![image](https://github.com/user-attachments/assets/548b0229-39df-4718-910c-d4ba9e6dbe87)# D-FLIPDLOP-NEGEDGE
 
 **AIM:**
 
@@ -44,17 +44,19 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
  RegisterNumber: 24007235
 
  ```
-module d_ff_neg_edge (d, clk, rst, q);
-  input d, clk, rst;
-  output reg q;
+module D_FF(D,clk,Q,Qbar);
+ input D,clk;
+ output reg Q;
+ output reg Qbar;
+ initial Q=0;
+ initial Qbar=1;
+ always @(posedge clk)
+ begin
+ Q=D;
+ Qbar=~D;
+ end
+ endmodule
 
-  always @(negedge clk or posedge rst) begin
-    if (rst)
-      q <= 0; // Reset the flip-flop
-    else
-      q <= d; // D input is passed to Q on the negative clock edge
-  end
-endmodule
 
 
 ```
@@ -67,8 +69,8 @@ endmodule
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![Screenshot 2024-12-24 112221](https://github.com/user-attachments/assets/3c77dba0-1a88-43b4-bbd8-855c7bf2694f)
 
-![Screenshot 2024-12-20 054532](https://github.com/user-attachments/assets/2a331c1d-98a7-4514-94c8-578e412a37ac)
 
 
 
